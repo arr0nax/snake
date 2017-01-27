@@ -1,0 +1,17 @@
+#snake {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+#apple {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+.wall {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
