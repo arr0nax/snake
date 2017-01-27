@@ -39,22 +39,24 @@ $(function() {
   randomWall();
   randomApple();
   $('body').keypress(function(e) {
+    if (points > 3) {
     $('h1').hide();
+  };
     console.log(e.keyCode);
-    if (e.keyCode === (97 || 37)) {
+    if (e.keyCode === (97 || 65)) {
       snakelm = snakelm - 100;
       lastpress = 97;
       $('#snake').animate({marginLeft: snakelm + 'px'}, 100);
-    } else if (e.keyCode === (115 || 40)) {
+    } else if (e.keyCode === (115 || 83)) {
       snaketm = snaketm + 100;
       lastpress = 115;
       $('#snake').animate({marginTop: snaketm + 'px'}, 100);
-    } else if (e.keyCode === (100 || 39)) {
+    } else if (e.keyCode === (100 || 68)) {
       snakelm = snakelm + 100;
       lastpress = 100;
 
       $('#snake').animate({marginLeft: snakelm + 'px'}, 100);
-    } else if (e.keyCode === (119 || 38)) {
+    } else if (e.keyCode === (119 || 87)) {
       snaketm = snaketm - 100;
       lastpress = 119;
       $('#snake').animate({marginTop: snaketm + 'px'}, 100);
