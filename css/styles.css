@@ -1,17 +1,29 @@
 #snake {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 #apple {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 .wall {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   position: absolute;
+}
+
+h1 {
+  position: absolute;
+  float: right;
+  font-size: 10vh;
+  margin-top: 65vh;
+}
+
+body {
+  background-image: url("../img/grass.png");
+  color: white;
 }

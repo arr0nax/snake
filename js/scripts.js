@@ -19,16 +19,16 @@ var randomApple = function() {
 }
 
 var randomWall = function() {
-  for (i=0;i<points;i++) {
-  var randomtm = Math.floor(Math.random()*10);
-  var randomlm = Math.floor(Math.random()*10);
-  walllm = randomlm * 100;
-  walltm = randomtm * 100;
-  $('.wall'+i).css("position","absolute");
-  $('.wall'+i).animate({marginLeft: walllm + 'px'})
-  $('.wall'+i).animate({marginTop: walltm + 'px'})
+    for (i=0;i<points;i++) {
+    var randomtm = Math.floor(Math.random()*10);
+    var randomlm = Math.floor(Math.random()*10);
+    walllm = randomlm * 100;
+    walltm = randomtm * 100;
+    $('.wall'+i).css("position","absolute");
+    $('.wall'+i).animate({marginLeft: walllm + 'px'})
+    $('.wall'+i).animate({marginTop: walltm + 'px'})
+    }
   }
-}
 
 randomWall();
 
@@ -36,7 +36,10 @@ randomWall();
 ////////////// FRONT END
 
 $(function() {
+  randomWall();
+  randomApple();
   $('body').keypress(function(e) {
+    $('h1').hide();
     console.log(e.keyCode);
     if (e.keyCode === (97 || 37)) {
       snakelm = snakelm - 100;
@@ -91,11 +94,16 @@ $(function() {
       console.log(currenttm, currentlm);
       currenttm = parseInt(currenttm);
       currentlm = parseInt(currentlm);
-      if ((snakelm === currentlm && snaketm === currenttm) && (currentlm != applelm && currenttm != appletm)) {
+      if (applelm === currentlm && appletm === currenttm) {
+        randomWall();
+      };
+      if (snakelm === currentlm && snaketm === currenttm) {
         alert("you lose");
         location.reload();
       };
+      if (applelm === 0 && appletm === 0) {
+        randomApple;
+      };
     };
-
   });
 });
