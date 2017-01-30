@@ -10,12 +10,6 @@
   width: 100px;
 }
 
-.wall {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-}
-
 h1 {
   position: absolute;
   float: right;
@@ -26,4 +20,9 @@ h1 {
 body {
   background-image: url("../img/grass.png");
   color: white;
+}
+
+ul {
+  float: right;
+  font-size: 3vw;
 }
